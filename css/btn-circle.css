@@ -1,9 +1,56 @@
 body {
-    background-color: #808080;
+    background-color: #C8C8C8;
 }
 h1{
-  color:#008080;
+  color:#286360;
 }
+a{
+  color:#C8C8C8;
+}
+.twitter{
+  color:#4099FF;
+}
+#skytron{
+    position: relative;
+    height: 200px;
+
+}
+.jumbotron{
+  overflow: hidden;
+  color:#C8C8C8;
+  background-color: #286360;
+  position: relative;
+    z-index: 100;
+
+   background: rgb(0, 0, 0); /* This is for ie8 and below */
+   background: rgba(255, 255, 255, 0.0); 
+
+}
+.skytron{
+    color: #999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    border-radius: 25px;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+    vertical-align: top;
+}
+.terminal{
+  color:#C8C8C8;
+}
+
 .btn-circle {
   width: 30px;
   height: 30px;
