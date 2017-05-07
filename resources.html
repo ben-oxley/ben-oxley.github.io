@@ -27,6 +27,7 @@
       <![endif]-->
     </head>
     <body>
+      <div id="particles-js"><canvas width="3840" height="200" style="width: 100%; height: 100%;"></canvas></div>
      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -63,11 +64,18 @@
         <p>Appveyor - <a href="https://ci.appveyor.com/">https://ci.appveyor.com/</a></p>
     </div>
 
-
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="js/particles.min.js"></script>
+  <script type="text/javascript">
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+</script>
 
 </body>
 </html>
