@@ -172,7 +172,7 @@
         };
       
       xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://services.swpc.noaa.gov/text/aurora-nowcast-map.txt', true);
+      xhr.open('GET', 'https://services.swpc.noaa.gov/text/aurora-nowcast-map.txt', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
