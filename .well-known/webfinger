@@ -1,0 +1,25 @@
+{
+    "subject":"acct:boxly@hachyderm.io",
+    "aliases":
+    [
+        "https://hachyderm.io/@boxly",
+        "https://hachyderm.io/users/boxly"
+    ],
+    "links":
+    [
+        {
+            "rel":"http://webfinger.net/rel/profile-page",
+            "type":"text/html",
+            "href":"https://hachyderm.io/@boxly"
+        },
+        {
+            "rel":"self",
+            "type":"application/activity+json",
+            "href":"https://hachyderm.io/users/boxly"
+        },
+        {
+            "rel":"http://ostatus.org/schema/1.0/subscribe",
+            "template":"https://hachyderm.io/authorize_interaction?uri={uri}"
+        }
+    ]
+}
