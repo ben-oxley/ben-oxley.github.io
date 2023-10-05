@@ -28,6 +28,44 @@
     body {
       font-family: Elena, -apple-system, BlinkMacSystemFont, Roboto, roboto slab, droid serif, segoe ui, system-ui, Arial, sans-serif;
       font-size: calc(.35842vw + .95296em);
+      margin: 20px auto;
+      width: 95%;
+    }
+
+    @media (min-width: 400px) {
+      body {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 700px) {
+      body {
+        width: 80%;
+      }
+    }
+
+    @media (min-width: 850px) {
+      body {
+        width: 70%;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      body {
+        width: 60%;
+      }
+    }
+
+    @media (min-width: 1100px) {
+      body {
+        width: 50%;
+      }
+    }
+
+    @media (min-width: 1450px) {
+      body {
+        width: 40%;
+      }
     }
 
     p {
@@ -37,22 +75,42 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
     }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: underline 2px;
+      text-underline-position: under;
+    }
+
+    .title{
+      font-size: max(5.0vw, 4.25rem); 
+    }
   </style>
+  <title>Ben Oxley</title>
 </head>
 
 <body>
+  <h1 class="title">Ben Oxley</h1>
+  <hr>
   <h1>Links</h1>
   <section name="links">
     <ul>
-      <li>Mastodon: <a href=https://hachyderm.io/@boxly>https://hachyderm.io/@boxly</a></li>
-      <li>Github: <a href="https://github.com/ben-oxley">https://github.com/ben-oxley</a></li>
-      <li>Matrix: <a href="https://matrix.to/#/@boxly:matrix.org">https://matrix.to/#/@boxly:matrix.org</a></li>
-      <li>Instagram <a href="https://www.instagram.com/benoxley/">https://www.instagram.com/benoxley/</a></li>
+      <li><i class="fa-brands fa-mastodon"></i> Mastodon: <a
+          href=https://hachyderm.io/@boxly>https://hachyderm.io/@boxly</a></li>
+      <li><i class="fa-brands fa-github"></i> Github: <a
+          href="https://github.com/ben-oxley">https://github.com/ben-oxley</a></li>
+      <li><i class="fa-regular fa-comments"></i> Matrix: <a
+          href="https://matrix.to/#/@boxly:matrix.org">https://matrix.to/#/@boxly:matrix.org</a></li>
+      <li><i class="fa-brands fa-instagram"></i> Instagram <a
+          href="https://www.instagram.com/benoxley/">https://www.instagram.com/benoxley/</a></li>
     </ul>
   </section>
   <h1>Work</h1>
   <section name="work">
-    <h3>Frazer-Nash Consultancy</h3>
+    <h3><i class="fa-solid fa-briefcase"></i> Frazer-Nash Consultancy</h3>
     <p>I work at <a href="https://www.linkedin.com/in/ben-oxley/">Frazer-Nash Consultancy</a> as the Cloud Technology
       Group Leader. Projects include:
     <ul>
@@ -64,13 +122,13 @@
           Engineer</a></li>
     </ul>
     </p>
-    <h3>University of Southampton</h3>
+    <h3><i class="fa-solid fa-user-graduate"></i> University of Southampton</h3>
     <p>4th Year Group Project - A balloon launched glider with a deployable ocean boy, drogue and satellite uplink <a
         href="files/GDP15_main_report.pdf">PDF</a></p>
   </section>
   <h1>Business</h1>
   <section name="business">
-    <h3>Oxley Cartography</h3>
+    <h3><i class="fa-solid fa-map-location-dot"></i> Oxley Cartography</h3>
     <p>
       Using high resolution LiDAR or Ordnance Survey data of the area to produce beautiful and fascinating 3D maps
       of the terrain around where you live.
@@ -84,26 +142,34 @@
   <h1>Projects</h1>
   <section name="projects">
     <ul>
-      <li>Roamlab - Portable homelab setup based on openwrt, SBCs, Ubiquiti, linux, docker and terraform. With the
-        intention to define as much of the setup as possible as code <a href="https://github.com/ben-oxley/roamlab">github</a></li>
-      <li>Atlas <a href="https://github.com/ben-oxley/atlas">github</a></li>
-      <li>Home monitoring</li>
-      <li>Vertigo2 is a compact and highly capable datalogging device. Its variety of sensors allows users to employ the
+      <li><i class="fa-solid fa-server"></i> Roamlab - Portable homelab setup based on openwrt, SBCs, Ubiquiti, linux,
+        docker and terraform. With the
+        intention to define as much of the setup as possible as code <a
+          href="https://github.com/ben-oxley/roamlab">github</a></li>
+      <li><i class="fa-solid fa-satellite"></i> Atlas <a href="https://github.com/ben-oxley/atlas">github</a></li>
+      <li><i class="fa-solid fa-house-signal"></i> Home monitoring</li>
+      <li><i class="fa-solid fa-wheelchair-move"></i> Vertigo2 is a compact and highly capable datalogging device. Its
+        variety of sensors allows users to employ the
         device in a wide variety of engineering, sports and science experiments.
         <a href="https://researchinschools.org/projects/vertigo/">IRIS Website</a>
         <a href="https://vertigo.engineering/#/instructions">Vertigo App</a>
       </li>
-      <li><a href="/aurora.html">Aurora nowcast visualiser</a></li>
-      <li>High altitude ballooning, including STEM projects <a href="files/grab 2013-05-19 at 10.53.45.png">Huff
-          Post</a> <a href="files/grab 2013-05-19 at 10.51.33.png">Daily Mail</a> <a href="https://www.dailyecho.co.uk/news/10266514.cosmic-teddy-bear-floated-21-miles-into-stratosphere/">Daily Echo</a></li>
+      <li><i class="fa-solid fa-earth-europe"></i> <a href="/aurora.html">Aurora nowcast visualiser</a></li>
+      <li><i class="fa-brands fa-fly"></i> High altitude ballooning, including STEM projects <a
+          href="files/grab 2013-05-19 at 10.53.45.png">Huff
+          Post</a> <a href="files/grab 2013-05-19 at 10.51.33.png">Daily Mail</a> <a
+          href="https://www.dailyecho.co.uk/news/10266514.cosmic-teddy-bear-floated-21-miles-into-stratosphere/">Daily
+          Echo</a></li>
     </ul>
   </section>
   <h1>Resources</h1>
   <section name="resources">
     <ul>
-      <li><a href=".well-known/webfinger">Webfinger</a>, primarily for mastodon</li>
+      <li><i class="fa-solid fa-hand-sparkles"></i> <a href=".well-known/webfinger">Webfinger</a>, primarily for
+        mastodon</li>
     </ul>
   </section>
+  <script src="https://kit.fontawesome.com/cb8cce0792.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
