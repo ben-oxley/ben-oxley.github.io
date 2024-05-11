@@ -75,7 +75,7 @@ function hslTorgba(h, s, l, alpha) {
         var data = [];
         let index = 0;
         for (var i = 0; i < jsonresponse.coordinates.length; i++) {
-            if (jsonresponse.coordinates[i][2] > 1) {
+            if (jsonresponse.coordinates[i][2] > 1 && Math.abs(jsonresponse.coordinates[i][1])>10) {
             data[index] = {};
             data[index].clr = hslTorgba(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 ,0.2);//hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
             data[index].lat = jsonresponse.coordinates[i][1];
