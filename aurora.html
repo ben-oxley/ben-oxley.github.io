@@ -39,6 +39,7 @@
         .pointLng('lng')
         .pointAltitude('alt')
         .pointColor('clr')
+        .pointsMerge(true)
         .pointLabel('name');
   
       setTimeout(() => world.pointOfView({ altitude: 3.5 }));
@@ -62,7 +63,7 @@ function hslTorgba(h, s, l, alpha) {
             const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
             return Math.round(255 * color);
         };
-        return rgba(f(0),f(8),f(4),alpha);
+        return `rgba(${f(0)},${f(8)},${f(4)},${alpha})`;
         }
   
       fetch('https://services.swpc.noaa.gov/json/ovation_aurora_latest.json')
@@ -76,7 +77,7 @@ function hslTorgba(h, s, l, alpha) {
         for (var i = 0; i < jsonresponse.coordinates.length; i++) {
             if (jsonresponse.coordinates[i][2] > 1) {
             data[index] = {};
-            data[index].clr = hslTorgba(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 ,0.3);//hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
+            data[index].clr = hslTorgba(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 ,0.2);//hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
             data[index].lat = jsonresponse.coordinates[i][1];
             data[index].lng = jsonresponse.coordinates[i][0];
             data[index++].alt = jsonresponse.coordinates[i][2] * 0.001;
