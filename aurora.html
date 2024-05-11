@@ -68,7 +68,7 @@
             data[index].clr = hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
             data[index].lat = jsonresponse.coordinates[i][1];
             data[index].lng = jsonresponse.coordinates[i][0];
-            data[index++].alt = jsonresponse.coordinates[i][2] * 0.01;
+            data[index++].alt = jsonresponse.coordinates[i][2] * 0.001;
             
             }
         }
