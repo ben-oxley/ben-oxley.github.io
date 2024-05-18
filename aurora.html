@@ -33,12 +33,13 @@
   
       const world = Globe()
         (document.getElementById('chart'))
-        .globeImageUrl('globe/world.jpg')
+        .globeImageUrl('globe/world-lighter.jpg')
         //.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
         .pointLat('lat')
         .pointLng('lng')
         .pointAltitude('alt')
         .pointColor('clr')
+        .pointsMerge(true)
         .pointLabel('name');
   
       setTimeout(() => world.pointOfView({ altitude: 3.5 }));
@@ -53,6 +54,17 @@
         };
         return `#${f(0)}${f(8)}${f(4)}`;
         }
+
+function hslTorgba(h, s, l, alpha) {
+        
+        const a = s * Math.min(l, 1 - l);
+        const f = n => {
+            const k = (n + h ) % 12;
+            const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+            return Math.round(255 * color);
+        };
+        return `rgba(${f(0)},${f(8)},${f(4)},${alpha})`;
+        }
   
       fetch('https://services.swpc.noaa.gov/json/ovation_aurora_latest.json')
       .then(function (response) {
@@ -63,12 +75,12 @@
         var data = [];
         let index = 0;
         for (var i = 0; i < jsonresponse.coordinates.length; i++) {
-            if (jsonresponse.coordinates[i][2] > 1) {
+            if (jsonresponse.coordinates[i][2] > 1 && Math.abs(jsonresponse.coordinates[i][1])>10) {
             data[index] = {};
-            data[index].clr = hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
+            data[index].clr = hslTorgba(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 ,0.2);//hslToHex(2+( jsonresponse.coordinates[i][2] * 0.1 ), 1.0, 0.5 );
             data[index].lat = jsonresponse.coordinates[i][1];
             data[index].lng = jsonresponse.coordinates[i][0];
-            data[index++].alt = jsonresponse.coordinates[i][2] * 0.01;
+            data[index++].alt = jsonresponse.coordinates[i][2] * 0.001;
             
             }
         }
